@@ -8,11 +8,11 @@ done
 
 set -e
 
-release_folder=$(find ~/.zen -maxdepth 1 -type d -name "*(*release*)*" | head -n1)
-release_folder=${release_folder:-$(find ~/.zen -maxdepth 1 -type d -name "*(*alpha*)*" | head -n1)}
+release_folder=$(find ~/.config/zen -maxdepth 1 -type d -name "*(*release*)*" | head -n1)
+release_folder=${release_folder:-$(find ~/.config/zen -maxdepth 1 -type d -name "*(*alpha*)*" | head -n1)}
 
 if [[ -z "$release_folder" ]]; then
-  echo "No (release) or (alpha) folder found in ~/.zen"
+  echo "No (release) or (alpha) folder found in ~/.config/zen"
   exit 1
 fi
 
